@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Sono:wght@300;400;500&family=Source+Code+Pro:ital,wght@1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  margin: 0;
+}
+body {
+  background-color: white !important;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+#asd {
+  height: 85rem;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #031b3b;
+  border: 0;
+  letter-spacing: 4px;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar li a,
+.navbar .navbar-brand {
+  color: #fff !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: black !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  padding: 5px;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 3rem;
+}
+
+/* .passorfail 
+{
+  background-color: rgb(14, 122, 13);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+} */
+.tablehead {
+  background-color: rgb(32, 40, 50);
+  color: white;
+  align-items: center;
+}
+
+#resulttable {
+  /* margin: 7rem auto 0px; */
+  /* width: 80%; */
+  /* margin-top: 5rem; */
+  display: none;
+}
+
+th,
+td {
+  padding: 8px !important;
+  border: 1px solid black !important;
+  text-align: center !important;
+}
+.button1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+}
+#submit {
+  padding: 3px;
+  background-color: #031b3b;
+  box-shadow: 1px 1px 3px 1px;
+  border-radius: 5px;
+  color: white;
+}
+#submit:hover {
+  background-color: white;
+  color: black;
+}
+
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#display-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer-and-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.count {
+  font-size: 18px;
+}
+
+.question {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.checkmark {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.checkmark::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  border-radius: 50%;
+}
+
+.checkmark.checked {
+  border-color: #007bff;
+}
+
+.checkmark.checked::before {
+  background-color: #007bff;
+}
+
+#next-button {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#next-button:hover {
+  background-color: #0069d9;
+}

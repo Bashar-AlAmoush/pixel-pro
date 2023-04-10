@@ -1,0 +1,228 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Sono:wght@300;400;500&family=Source+Code+Pro:ital,wght@1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"); */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #031b3b;
+  border: 0;
+  letter-spacing: 4px;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar li a,
+.navbar .navbar-brand {
+  color: #fff !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: black !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  padding: 5px;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+#wel {
+  color: #4386ff;
+}
+.hero img {
+  width: 100%;
+  height: 700px;
+}
+.pixelPro {
+  position: absolute;
+  font-weight: bold;
+  color: #031b3b;
+  width: 600px;
+  height: 250px;
+  background-color: rgba(220, 220, 220, 0.397);
+  left: 15rem;
+  top: 8rem;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 20px;
+}
+#submit {
+  font-family: "Edu NSW ACT Foundation";
+  color: white;
+  font-size: large;
+}
+#submit {
+  /* background-color: #1f2131;
+  color: white;
+  border-radius: 0;
+  padding: 5px; */
+  cursor: pointer;
+}
+/* #submit:hover { */
+/* background-image: linear-gradient(45deg, #031b3b, #dfe9f2);
+  color: white;
+  background-color: white; */
+/* } */
+/* .anii {
+  border-radius: 24px 101px 23px 138px;
+  border: 8px solid #031b3b;
+  border-image: linear-gradient(black, grey, white) 1;
+} */
+.buu {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+}
+
+.buu:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-img {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: black;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: radial-gradient(#1cd9ff, #4386ff);
+}
+
+/* .card-2 {
+  background: radial-gradient(#fbc1cc, #fa99b2);
+}
+
+.card-3 {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.card-4 {
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-5 {
+  background: radial-gradient(#f588d8, #c0a3e5);
+} */
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}

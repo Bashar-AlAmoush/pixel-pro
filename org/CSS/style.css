@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Sono:wght@300;400;500&family=Source+Code+Pro:ital,wght@1,200;1,400&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,700;1,700&display=swap');
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Nav bar style */
+
+.navbar a:hover {
+  color: black !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #031b3b;
+  border: 0;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+.nav-link {
+  color: white;
+}
+.navbar li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.navbar li a,
+.navbar .navbar-brand {
+  color: #fff !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: black !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  padding: 5px;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.gradient-custom {
+  background: #f093fb;
+
+  background: -webkit-linear-gradient(to bottom right, #57c5b6, #159895);
+
+  background: linear-gradient(to bottom right, #4e96ee, rgb(213, 129, 45));
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+.form-control:hover {
+  box-shadow: 0px 0px 18px 3px #4e96ee;
+}
+.form-control
+{
+  border: #031b3b solid 1px;
+}
+
+/* Log in page style */
+.gradient-custom-2 {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #031b3b, #031b3b, #031b3b, #031b3b);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 70vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
+
+.signUp:hover {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px orange;
+}
+
+/* button */
+.btn {
+  --border-color: linear-gradient(-45deg, #1a5f7a, #159895, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #031b3b;
+  --color: #afffff;
+  color: var(--color);
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px #031b3b;
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.ttrr {
+  font-weight: bold;
+  color: #031b3b;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-registration {
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.card-registration {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.colorbg {
+  background-color: #031b3b;
+}
+
+
+
+.dropdown-toggle{
+  width: 100%;
+  border:#031b3b solid 1px;
+}
+
+
+
+div #errors1 {
+list-style-type: none;
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,700;1,700&display=swap');
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #031b3b;
+    border: 0;
+    letter-spacing: 4px;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .navbar li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+  }
+  .navbar li a,
+  .navbar .navbar-brand {
+    color: #fff !important;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .navbar-nav li a:hover,
+  .navbar-nav li.active a {
+    color: black !important;
+    background-color: white !important;
+    border-radius: 5px !important;
+    padding: 5px;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+/* animation for the featurette-heading */
+.featurette-heading {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* animation for the featurette images */
+  .featurette-image {
+    animation-name: slide-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
